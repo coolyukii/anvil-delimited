@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "anvil-delimited",
+  "version": "${version}",
+  "name": "Anvil Delimited",
+  "description": "A mod aiming to rid the player of the risks that come with enchanting the best gear. Can raise or lower the XP required to see the \"Too Expensive!\" string in the anvil.",
+  "authors": [
+    "cce"
+  ],
+  "contact": {
+    "repo": "https://github.com/majestic-0/Forging-Beyond"
+  },
+  "license": "MIT",
+  "icon": "assets/anvil-delimited/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "com.cce.anvildelimited.client.AnvilDelimitedClient"
+    ],
+    "main": [
+      "com.cce.anvildelimited.AnvilDelimited"
+    ]
+  },
+  "mixins": [
+    "anvil-delimited.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.14.8",
+    "minecraft": ">=1.16.0"
+  }
+}

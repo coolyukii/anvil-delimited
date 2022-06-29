@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.cce.anvildelimited.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "AnvilScreenHandlerMixin"
+  ],
+  "client": [
+    "AnvilScreenMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
