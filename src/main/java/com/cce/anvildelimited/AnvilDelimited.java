@@ -1,6 +1,7 @@
 package com.cce.anvildelimited;
 
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerEntityEvents;
 import net.fabricmc.fabric.api.gamerule.v1.GameRuleFactory;
 import net.fabricmc.fabric.api.gamerule.v1.GameRuleRegistry;
@@ -12,6 +13,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.world.GameRules;
 
 public class AnvilDelimited implements ModInitializer {
+    public static int gameRuleValue;
     public static final Identifier ID = new Identifier("anvil-delimited", "send-gamerule-value");
 
     /**
@@ -29,12 +31,28 @@ public class AnvilDelimited implements ModInitializer {
                                 }
                             })));
 
-    /**
-     * Registers a listener upon mod initialization. The code runs every time a player joins a world for the purposes
-     * of syncing the server and client sides.
-     */
     @Override
     public void onInitialize() {
+        gameRuleValue = 40;
+        registerServerPlayerListener();
+        registerGlobalValueReceiver();
+    }
+
+    /**
+     * Registers a global receiver. For syncing the client and server sides together.
+     */
+    private void registerGlobalValueReceiver() {
+        ClientPlayNetworking.registerGlobalReceiver(AnvilDelimited.ID, (client, handler, buf, responseSender) -> {
+            int i = buf.readInt();
+            gameRuleValue = i < 2 || i > Short.MAX_VALUE ? 40 : i;
+        });
+    }
+
+    /**
+     * Registers a listener. The code executes everytime a player joins a world or a server and sends the player the gamerule's value integer as a packet.
+     */
+
+    private void registerServerPlayerListener() {
         ServerEntityEvents.ENTITY_LOAD.register(
                 ((entity, world) -> {
                     if (entity instanceof ServerPlayerEntity) {

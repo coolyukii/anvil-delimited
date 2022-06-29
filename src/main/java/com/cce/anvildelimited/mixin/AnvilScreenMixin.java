@@ -1,6 +1,6 @@
 package com.cce.anvildelimited.mixin;
 
-import com.cce.anvildelimited.client.AnvilDelimitedClient;
+import com.cce.anvildelimited.AnvilDelimited;
 import net.minecraft.client.gui.screen.ingame.AnvilScreen;
 import net.minecraft.client.gui.screen.ingame.ForgingScreen;
 import net.minecraft.entity.player.PlayerInventory;
@@ -20,7 +20,7 @@ public class AnvilScreenMixin extends ForgingScreen<AnvilScreenHandler> {
 
     @ModifyConstant(method = "drawForeground", constant = @Constant(intValue = 40))
     private int modifyTooExpensiveValue(int i) {
-        int j = AnvilDelimitedClient.gameRuleValue;
+        int j = AnvilDelimited.gameRuleValue;
         return j;
     }
 }
