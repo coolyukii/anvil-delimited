@@ -21,13 +21,11 @@ public abstract class AnvilScreenHandlerMixin extends ForgingScreenHandler {
 
     @ModifyConstant(method = "updateResult", constant = @Constant(intValue = 40))
     private int modifyVanillaConstant(int i) {
-        int j = AnvilDelimited.gameRuleValue;
-        return j;
+        return AnvilDelimited.gameRuleValue;
     }
 
     @ModifyConstant(method = "updateResult", constant = @Constant(intValue = 39))
     private int modifyVanillaRenameConstant(int i) {
-        int j = AnvilDelimited.gameRuleValue - 1;
-        return j;
+        return AnvilDelimited.gameRuleValue - 1;
     }
 }

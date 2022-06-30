@@ -20,7 +20,6 @@ public class AnvilScreenMixin extends ForgingScreen<AnvilScreenHandler> {
 
     @ModifyConstant(method = "drawForeground", constant = @Constant(intValue = 40))
     private int modifyTooExpensiveValue(int i) {
-        int j = AnvilDelimited.gameRuleValue;
-        return j;
+        return AnvilDelimited.gameRuleValue;
     }
 }

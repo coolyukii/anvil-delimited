@@ -39,7 +39,7 @@ public class AnvilDelimited implements ModInitializer {
     }
 
     /**
-     * Registers a global receiver. For syncing the client and server sides together.
+     * Registers a global receiver for the purposes of syncing the client and server sides together.
      */
     private void registerGlobalValueReceiver() {
         ClientPlayNetworking.registerGlobalReceiver(AnvilDelimited.ID, (client, handler, buf, responseSender) -> {
@@ -49,7 +49,7 @@ public class AnvilDelimited implements ModInitializer {
     }
 
     /**
-     * Registers a listener. The code executes everytime a player joins a world or a server and sends the player the gamerule's value integer as a packet.
+     * Registers a listener. The lambda executes everytime a player joins a world or a server and sends the player the gamerule's value integer as a packet.
      */
 
     private void registerServerPlayerListener() {
