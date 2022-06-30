@@ -1,0 +1,4 @@
+{
+  "gamerule.anvilXPLimit": "Anvil XP limit",
+  "gamerule.anvilXPLimit.description": "Changes at what value the anvil will display the \"Too Expensive!\" message and prevent the player from forging the item."
+}
