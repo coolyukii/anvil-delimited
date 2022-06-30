@@ -14,7 +14,7 @@ import net.minecraft.world.GameRules;
 
 public class AnvilDelimited implements ModInitializer {
     public static int gameRuleValue;
-    public static final Identifier ID = new Identifier("anvil-delimited", "send-gamerule-value");
+    private static final Identifier ID = new Identifier("anvil-delimited", "send-gamerule-value");
 
     /**
      * Creates the actual gamerule. The lambda will run every time the gamerule value updates,
