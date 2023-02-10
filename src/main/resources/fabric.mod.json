@@ -5,17 +5,20 @@
   "name": "Anvil Delimited",
   "description": "A mod aiming to rid the player of the risks that come with enchanting the best gear. Can raise or lower the XP required to see the \"Too Expensive!\" string in the anvil.",
   "authors": [
-    "majestic-0"
+    "yukii"
   ],
   "contact": {
-    "repo": "https://github.com/majestic-0/anvil-delimited"
+    "repo": "https://github.com/coolyukii/anvil-delimited"
   },
   "license": "MIT",
   "icon": "assets/anvil-delimited/icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [
-      "com.cce.anvildelimited.AnvilDelimited"
+      "com.yukii.anvildelimited.AnvilDelimited"
+    ],
+    "client": [
+      "com.yukii.anvildelimited.AnvilDelimitedClient"
     ]
   },
   "mixins": [
