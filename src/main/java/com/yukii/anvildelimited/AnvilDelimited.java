@@ -1,4 +1,4 @@
-package com.cce.anvildelimited;
+package com.yukii.anvildelimited;
 
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;

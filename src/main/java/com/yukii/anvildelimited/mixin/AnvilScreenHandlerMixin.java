@@ -1,7 +1,7 @@
-package com.cce.anvildelimited.mixin;
+package com.yukii.anvildelimited.mixin;
 
 
-import com.cce.anvildelimited.AnvilDelimited;
+import com.yukii.anvildelimited.AnvilDelimited;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.screen.AnvilScreenHandler;
 import net.minecraft.screen.ForgingScreenHandler;
